@@ -15,7 +15,7 @@ class WeatherProvider with ChangeNotifier {
   List<dynamic>? get forecast => _forecast;
 
   Future<void> fetchWeather() async {
-    final apiKey = "ccc5c2b9ada5fbdb162ccb9fb7bc38f6";
+    final apiKey = "API_KEY";
     final unit = _isCelsius ? "metric" : "imperial";
     try {
       final response = await http.get(Uri.parse(
@@ -34,7 +34,7 @@ class WeatherProvider with ChangeNotifier {
   }
 
   Future<void> fetchForecast() async {
-    final apiKey = "ccc5c2b9ada5fbdb162ccb9fb7bc38f6";
+    final apiKey = "API_KEY";
     final unit = _isCelsius ? "metric" : "imperial";
     try {
       final response = await http.get(Uri.parse(
